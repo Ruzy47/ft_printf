@@ -6,17 +6,19 @@
 #    By: rugrigor <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/06 17:35:50 by rugrigor          #+#    #+#              #
-#    Updated: 2023/02/06 17:41:46 by rugrigor         ###   ########.fr        #
+#    Updated: 2023/02/06 19:33:02 by rugrigor         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME =libft.a
+NAME =libftprintf.a
 
 CC =cc
 
 CFLAGS= -Wall -Wextra -Werror
 
-SRCS =  $(wildcard *.c)
+SRCS =  ft_printf.c		\
+		ft_numbers.c	\
+		funcs.c			\
 
 OBJS        = $(SRCS:.c=.o)
 

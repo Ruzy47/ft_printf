@@ -6,7 +6,7 @@
 /*   By: rugrigor <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 10:25:43 by rugrigor          #+#    #+#             */
-/*   Updated: 2023/02/06 19:11:14 by rugrigor         ###   ########.fr       */
+/*   Updated: 2023/02/07 15:28:53 by rugrigor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,13 @@ void	ft_number(int num, int *len)
 
 void	ft_unsigned(unsigned int num, int *len)
 {
-	if (num > 9) 
+	if (num > 9)
 	{
 		ft_unsigned(num / 10, len);
-		*len += ft_putchar(num % 10);
+		ft_unsigned(num % 10, len);
 	}
+	else
+		*len += ft_putchar(num + 48);
 }
 
 void	ft_hexadec(unsigned int hex, char c, int *len)
